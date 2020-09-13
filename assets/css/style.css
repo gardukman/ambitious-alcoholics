@@ -1,25 +1,61 @@
 header{
-    background-color: #8B4513;
-    color: gold;
+    background-color: #4C061D;
+    color: goldenrod;
     text-align: center;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px 35px;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header h1{
+    background-color: #4C061D;
 }
 
 .hero{
     background-image: url("../photos/bar-1.jpg");
     background-size: cover;
     height: 200px;
-    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background-size: cover;
     background-position: center;
-    align-items: flex-start;
+    align-items: center;
     background-attachment: fixed;
     background-position: 80%;
-    align-items: right;
+    align-items: center;
+}
+
+button{
+    background-color: #68a0b0;
+    border: none;
+    color: green;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50px;
+    transition-duration: 0.4s;
+    float: center;
+    position: absolute;
+}
+
+button:hover {
+    background-color: #4CAF50;
+}
+
+.footer{
+    background-color: #4C061D;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 35px;
+    color: gold;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
