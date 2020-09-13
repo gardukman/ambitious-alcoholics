@@ -25,7 +25,7 @@ boozeAPI("Vodka");                                                              
 /* API2 Wikipedia - data */
 var wikiAPI = function (searchItem) {
     fetch(
-        'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids=32787&inprop=url'
+        'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exsentences=10&explaintext&pageids=32787&inprop=url&format=json'
     )
        .then(function (wikiResponse) {
            return wikiResponse.json()
