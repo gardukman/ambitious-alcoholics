@@ -40,7 +40,7 @@ var wikiAPI = function (searchItem) {
             break;
     }
     fetch(
-        'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exsentences=10&explaintext&pageids='+ pageId + '&inprop=url&format=json'
+        'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exsentences=10&pageids='+ pageId + '&inprop=url&format=json'
     )
        .then(function (wikiResponse) {
            return wikiResponse.json()
@@ -49,8 +49,8 @@ var wikiAPI = function (searchItem) {
            console.log(wikiResponse)
            var wikiArticle = wikiResponse.query.pages[pageId].extract
            console.log(wikiArticle)
-           $(".wiki").text(wikiArticle)
+           $(".wiki").html(wikiArticle)
        })
        
 }
-wikiAPI("Gin");
+wikiAPI("Vodka");
