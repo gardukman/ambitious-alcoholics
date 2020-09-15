@@ -16,11 +16,23 @@ var boozeAPI = function (searchItem) {                                          
                 }
             }
             console.log(drinkArray)
+            console.log(boozeResponse)
+            $("#d1h").text(boozeResponse.drinks[drinkArray[0]].strDrink)
+            $("#d1i").attr("src",boozeResponse.drinks[drinkArray[0]].strDrinkThumb)
+
+            $("#d2h").text(boozeResponse.drinks[drinkArray[1]].strDrink)
+            $("#d2i").attr("src",boozeResponse.drinks[drinkArray[1]].strDrinkThumb)
+
+            $("#d3h").text(boozeResponse.drinks[drinkArray[2]].strDrink)
+            $("#d3i").attr("src",boozeResponse.drinks[drinkArray[2]].strDrinkThumb)
+
+            $("#d4h").text(boozeResponse.drinks[drinkArray[3]].strDrink)
+            $("#d4i").attr("src",boozeResponse.drinks[drinkArray[3]].strDrinkThumb)
+
+            $("#d5h").text(boozeResponse.drinks[drinkArray[4]].strDrink)
+            $("#d5i").attr("src",boozeResponse.drinks[drinkArray[4]].strDrinkThumb)
         })
 }
-
-
-boozeAPI("Vodka");                                                                          //testing user input using static variable.  will be replaced with button click results
 
 /* API2 Wikipedia - data */
 var wikiAPI = function (searchItem) {
@@ -40,7 +52,7 @@ var wikiAPI = function (searchItem) {
             break;
     }
     fetch(
-        'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exsentences=10&explaintext&pageids='+ pageId + '&inprop=url&format=json'
+        'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exsentences=10&pageids='+ pageId + '&inprop=url&format=json'
     )
        .then(function (wikiResponse) {
            return wikiResponse.json()
@@ -49,8 +61,28 @@ var wikiAPI = function (searchItem) {
            console.log(wikiResponse)
            var wikiArticle = wikiResponse.query.pages[pageId].extract
            console.log(wikiArticle)
-           $(".wiki").text(wikiArticle)
+           $(".wiki").html(wikiArticle)
        })
        
 }
-wikiAPI("Gin");
+
+var mainAPICall = function(alcoholType){
+
+    boozeAPI(alcoholType);
+    wikiAPI(alcoholType);
+
+}
+
+const whiteHeart = '\u2661';
+const blackHeart = '\u2665';
+const button = document.querySelector('#d1f');
+button.addEventListener('click', toggle);
+
+function toggle() {
+  const like = button.textContent;
+  if(like==whiteHeart) {
+    button.textContent = blackHeart;
+  } else {
+    button.textContent = whiteHeart;
+  }
+}
