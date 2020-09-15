@@ -73,3 +73,11 @@ h2 {
     width: 100%;
     text-align: center;
 }
+.my-container {
+    width:200px;
+    height: 120px;
+}
+.drink-image {
+    width: 100%;
+    height: auto;
+}
