@@ -35,7 +35,6 @@ var boozeAPI = function (searchItem) {
                 // body div
                 var cardBody = document.createElement("div")
                 cardBody.id = "d" + t + "d"
-                cardBody.classList.add("my-container")
                 parent.append(cardBody)
                 
                 // image of card
