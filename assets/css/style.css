@@ -1,7 +1,11 @@
+*{
+    font-family: 'Times New Roman', Times, serif;  
+}
+
 /* header */
 header{
-    background-color: #4C061D;
-    color: goldenrod;
+    background-color: #0063B2;
+    color: gold;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -11,69 +15,69 @@ header{
 }
 
 header h1{
-    background-color: #4C061D;
+    background-color: #0063B2;
 }
 
 /* hero */
 .hero{
-    background-image: url("../photos/bar-1.jpg");
+    background-image: url("../photos/bar-2.jpg");
     background-size: cover;
     height: 200px;
     justify-content: center;
     flex-wrap: wrap;
     background-size: cover;
-    background-position: center;
-    align-items: center;
     background-attachment: fixed;
     background-position: 80%;
     align-items: center;
 }
 
+/* description */
+#description{
+    text-indent: 30px;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* buttons */
 button{
-    background-color: #68a0b0;
-    border: none;
-    color: green;
-    padding: 15px 32px;
+    background-color: darkgreen;
+    color: gold;
     text-align: center;
-    text-decoration: none;
     font-size: 16px;
-    border-radius: 50px;
     transition-duration: 0.4s;
-    float: center;
-    position: absolute;
+    position: relative;
+    font-family: "Times New Roman", Times, serif;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    padding: 15px 32px;
+    text-decoration: none;
+}
+
+.btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: maroon;
 }
 
 /* card */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
     text-align: center;
     padding: 20px 0px 20px 0px;
 
 }
 
-h2 {
+.title {
     color: gold;
+    text-decoration: underline gold;
 }
 
-.footer{
-    background-color: #4C061D;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px 35px;
-    color: gold;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
 .my-container {
     width:150px;
     height: 120px;
@@ -81,4 +85,22 @@ h2 {
 .drink-image {
     width: 100%;
     height: auto;
+}
+
+#history{
+    padding: 20px 40px 20px 40px;
+}
+
+/* footer */
+.footer{
+    background-color: #0063B2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: gold;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 35px;
 }
