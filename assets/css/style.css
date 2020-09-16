@@ -91,6 +91,10 @@ button:hover {
     padding: 20px 40px 20px 40px;
 }
 
+i{
+    font-size: xx-large;
+}
+
 /* footer */
 .footer{
     background-color: #0063B2;
@@ -103,4 +107,8 @@ button:hover {
     width: 100%;
     text-align: center;
     padding: 20px 35px;
+}
+img {
+    height: 200px;
+    width: 200px;
 }
