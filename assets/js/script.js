@@ -17,12 +17,13 @@ var boozeAPI = function (searchItem) {
                 }
             }
 
+            // start of build cards section
             for (var t = 0; t < numDrinks; t++) {
-
+                // clear parent div to remove old cards if necessary
                 var parent = $("#card-" + t);
-                console.log(parent)
-                removeAllChildNodes(parent);
+                $(parent).empty()
 
+                //update drinks from local storage
                 var storedDrinks = JSON.parse(localStorage.getItem("favoriteDrinks")) || []
 
                 // title of card
@@ -47,7 +48,8 @@ var boozeAPI = function (searchItem) {
                 // favorite icon
                 
                 var statusDrink = storedDrinks.includes(boozeResponse.drinks[drinkArray[t]].strDrink)
-                if (statusDrink) {
+
+                if (statusDrink) {                  //verify if drink is like or not
                     var heartSetting1 = "fa"
                     var heartSetting2= "fa-heart"
                 } else {
@@ -61,11 +63,13 @@ var boozeAPI = function (searchItem) {
                 cardIcon.setAttribute("onclick", "changeFav('d" + t + "h', 'd" + t + "f')")
                 $("#d" + t + "d").append(cardIcon)
             }
+            // end of build card section
         })
 }
 
 /* API2 Wikipedia - data */
 var wikiAPI = function (searchItem) {
+    //case statement to return pageid for api request using button click from user
     switch (searchItem) {
         case "Vodka":
             var pageId = 32787;
@@ -94,45 +98,34 @@ var wikiAPI = function (searchItem) {
 }
 
 var mainAPICall = function (alcoholType) {
-
+    //triggered by button click of user
     boozeAPI(alcoholType);
     wikiAPI(alcoholType);
 
 }
 
-function removeAllChildNodes(parent) {
-    console.log("trying to remove")
-    console.log(parent)
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-}
-
 function changeFav(headerID, iconID) {
-    var favorites = JSON.parse(localStorage.getItem("favoriteDrinks")) || []
-    var drinkName = $("#" + headerID).text()
-    var drinkStatus = favorites.includes(drinkName)
-    if (!drinkStatus) {
-        favorites.push(drinkName)
-        localStorage.setItem('favoriteDrinks', JSON.stringify(favorites))
-        $("#" + iconID).toggleClass('fa far')
+    //update local storage from button click; also refresh icon fill
+    var favorites = JSON.parse(localStorage.getItem("favoriteDrinks")) || []    //populate the array from local storage
+    var drinkName = $("#" + headerID).text()                                    //get drink name from other element
+    var drinkStatus = favorites.includes(drinkName)                             //find drink name in drink array
+    if (!drinkStatus) {                                                         // if drink does not exist in the array
+        favorites.push(drinkName)                                               //add drink name
+        localStorage.setItem('favoriteDrinks', JSON.stringify(favorites))       //push drink array to local storage
+        $("#" + iconID).toggleClass('fa far')                                   //update class to add icon fill
 
-    } else {
-        for (var a = 0; a <favorites.length; a++) {
+    } else {                                                                        //if array item already present, remove favorite status
+        for (var a = 0; a < favorites.length; a++) {                                //loop to find position of drink name in array
 
-            if (favorites[a] === drinkName){
-                console.log(favorites[a], drinkName, a)
-               favorites.splice((a),1)
-               localStorage.setItem('favoriteDrinks', JSON.stringify(favorites))
+            if (favorites[a] === drinkName){                                         //if drink name = array position 
+               favorites.splice((a),1)                                              //remove drink position
+               localStorage.setItem('favoriteDrinks', JSON.stringify(favorites))    //push updated array to local storage
                break;
             }
 
         }
 
-        $("#" + iconID).toggleClass('fa far')
+        $("#" + iconID).toggleClass('fa far')                                   //update class to remove icon fill
     }
 
 }
-
-
-
