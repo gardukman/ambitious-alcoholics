@@ -4,8 +4,8 @@
 
 /* header */
 header{
-    background-color: rgb(0, 99, 178);
-    color: goldenrod;
+    background-color: #0063B2;
+    color: gold;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,7 @@ header{
 }
 
 header h1{
-    background-color: rgb(0, 99, 178);
+    background-color: #0063B2;
 }
 
 /* hero */
@@ -41,8 +41,8 @@ header h1{
 
 /* buttons */
 button{
-    background-color: rgb(236, 193, 156);
-    color: black;
+    background-color: darkgreen;
+    color: gold;
     text-align: center;
     font-size: 16px;
     transition-duration: 0.4s;
@@ -63,7 +63,7 @@ button{
 }
 
 button:hover {
-    background-color: goldenrod;
+    background-color: maroon;
 }
 
 /* card */
@@ -74,8 +74,8 @@ button:hover {
 }
 
 .title {
-    color: goldenrod;
-    text-decoration: underline goldenrod;
+    color: gold;
+    text-decoration: underline gold;
 }
 
 .my-container {
@@ -93,11 +93,11 @@ button:hover {
 
 /* footer */
 .footer{
-    background-color: rgb(0, 99, 178);
+    background-color: #0063B2;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    color: goldenrod;
+    color: gold;
     left: 0px;
     bottom: 0px;
     width: 100%;
