@@ -84,7 +84,7 @@ var wikiAPI = function (searchItem) {
             break;
     }
     fetch(
-        'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro=1&pageids=' + pageId + '&inprop=url&format=json'
+        'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro=1&exsectionformat=plain&pageids=' + pageId + '&inprop=url&format=json'
     )
         .then(function (wikiResponse) {
             return wikiResponse.json()
@@ -98,8 +98,12 @@ var wikiAPI = function (searchItem) {
 
 var mainAPICall = function (alcoholType) {
     //triggered by button click of user
+    $("#alcohol-name").text(alcoholType)
+
     boozeAPI(alcoholType);
     wikiAPI(alcoholType);
+
+
 
 }
 
