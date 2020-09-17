@@ -93,10 +93,7 @@ button:hover {
 .drink-image {
     width: 100%;
     height: auto;
-}
-
-h4 {
-    padding: 20px;
+    
 }
 
 #history{
@@ -108,8 +105,10 @@ i{
     color: #263238;
 }
 /* main */
-.lil{
-    padding: 20px 0px;
+
+.lil {
+    padding: 20px 0px 20px 0px;
+    background-color: #90a4ae;
 }
 
 /* footer */
@@ -125,25 +124,7 @@ i{
     text-align: center;
     padding: 20px 35px;
 }
-
-/* media queries */
-@media screen and (max-width: 1024px) {
-    .drink-image {
-        width: 100%;
-        height: auto;    
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .drink-image {
-        width: 50%;
-        height: auto;    
-    }
-}
-
-@media screen and (max-width: 568px) {
-    .drink-image {
-        width: 20%;
-        height: auto;    
-    }
+img {
+    height: 200px;
+    width: 200px;
 }
