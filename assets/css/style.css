@@ -4,12 +4,12 @@
 
 /* header */
 header{
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #263238;
     color: gold;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     padding: 20px 35px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -20,13 +20,12 @@ header h1{
 
 /* hero */
 .hero{
-    background-image: url("../photos/bar-2.jpg");
+    background-image: url("../photos/cardboard.jpg");
     background-size: cover;
     height: 200px;
     justify-content: center;
     flex-wrap: wrap;
     background-size: cover;
-    background-attachment: fixed;
     background-position: 80%;
     align-items: center;
 }
@@ -104,26 +103,26 @@ i{
     font-size: xx-large;
     color: #263238;
 }
-/* main */
 
+/* main */
 .lil {
     padding: 20px 0px 20px 0px;
     background-color: #90a4ae;
 }
 
 /* footer */
-.footer{
-    background-color: #263238;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    color: gold;
-    left: 0px;
-    bottom: 0px;
+.footer {
+    left: 0;
+    bottom: 0;
     width: 100%;
+    background-color: #263238;
+    color: gold;
     text-align: center;
     padding: 20px 35px;
-}
+ }
+
+
+
 img {
     height: 200px;
     width: 200px;
