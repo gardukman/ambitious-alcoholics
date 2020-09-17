@@ -75,6 +75,7 @@ button:hover {
 .title {
     color: gold;
     text-decoration: underline gold;
+    background-color: #263238;
 }
 
 .my-container {
