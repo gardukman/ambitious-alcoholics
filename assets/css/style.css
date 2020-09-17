@@ -78,7 +78,7 @@ button:hover {
 .title {
     color: gold;
     text-decoration: underline gold;
-    background-color: black;
+    background-color:  #263238;
     font-size: 40px;
 }
 
@@ -121,7 +121,7 @@ img {
 #alcohol-name{
     font-size: 30px;
     font-weight: bold;
-    color: #263238;
-    text-decoration: underline #263238;
+    color: black;
+    text-decoration: underline black;
     padding: 0px;
 }
