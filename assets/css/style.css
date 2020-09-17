@@ -4,7 +4,7 @@
 
 /* header */
 header{
-    background-color: #0063B2;
+    background-color: #263238;
     color: gold;
     text-align: center;
     display: flex;
@@ -15,7 +15,7 @@ header{
 }
 
 header h1{
-    background-color: #0063B2;
+    background-color: #263238;
 }
 
 /* hero */
@@ -41,8 +41,8 @@ header h1{
 
 /* buttons */
 button{
-    background-color: darkgreen;
-    color: gold;
+    background-color: #455a64;
+    color: black;
     text-align: center;
     font-size: 16px;
     transition-duration: 0.4s;
@@ -64,7 +64,7 @@ button{
 }
 
 button:hover {
-    background-color: maroon;
+    background-color: gold;
 }
 
 /* card */
@@ -93,7 +93,10 @@ button:hover {
 .drink-image {
     width: 100%;
     height: auto;
-    
+}
+
+h4 {
+    padding: 20px;
 }
 
 #history{
@@ -102,12 +105,12 @@ button:hover {
 
 /* main */
 .lil{
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0px;
 }
 
 /* footer */
 .footer{
-    background-color: #0063B2;
+    background-color: #263238;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -117,4 +120,26 @@ button:hover {
     width: 100%;
     text-align: center;
     padding: 20px 35px;
+}
+
+/* media queries */
+@media screen and (max-width: 1024px) {
+    .drink-image {
+        width: 100%;
+        height: auto;    
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .drink-image {
+        width: 50%;
+        height: auto;    
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .drink-image {
+        width: 20%;
+        height: auto;    
+    }
 }
