@@ -9,8 +9,10 @@ header{
     width: 100%;
     background-color: #263238;
     color: gold;
+    text-decoration: underline gold;
+    font-size: 50px;
     text-align: center;
-    padding: 20px 35px;
+    padding: 20px 0px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -22,11 +24,11 @@ header h1{
 .hero{
     background-image: url("../photos/cardboard.jpg");
     background-size: cover;
-    height: 200px;
+    height: 400px;
     justify-content: center;
     flex-wrap: wrap;
     background-size: cover;
-    background-position: 80%;
+    background-position: 70%;
     align-items: center;
 }
 
@@ -107,7 +109,7 @@ i{
     background-color: #263238;
     color: gold;
     text-align: center;
-    padding: 20px 35px;
+    padding: 20px 0px;
 }
 
 img {
@@ -117,12 +119,9 @@ img {
 
 /* Alcohol name */
 #alcohol-name{
-    font-size: 72px;
+    font-size: 30px;
+    font-weight: bold;
     color: #263238;
     text-decoration: underline #263238;
-}
-
-@media only screen and (max-width: 1390px) {
-
-
+    padding: 0px;
 }
