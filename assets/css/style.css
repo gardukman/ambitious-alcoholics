@@ -117,3 +117,10 @@ img {
     height: 200px;
     width: 200px;
 }
+
+/* Alcohol name */
+#alcohol-name{
+    font-size: 72px;
+    color: #263238;
+    text-decoration: underline #263238;
+}
