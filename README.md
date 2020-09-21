@@ -14,7 +14,7 @@ https://jacobwilde378.github.io/ambitious-alcoholics/
 <img src="./assets/photos/AA1.PNG" alt = "sample of what the website looks like before an alcohol is selected."></img>
 <img src="./assets/photos/AA2.PNG" alt = "sample of what the website looks like after an alcohol is selected."></img>
 
-##Creators
+## Creators
 * Garrett Manwaring
 * Logan Page
 * Jacob Wilde
